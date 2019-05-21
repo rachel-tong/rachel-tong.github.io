@@ -1340,7 +1340,12 @@ position:relative
 .cn-purple,
 .cn-hover-purple:hover {
 	color: #fff!important;
-	background-color: #9c27b0!important
+	background-color: #9370DB!important;
+}
+
+.cn-text-purple,
+.cn-hover-text-purple:hover {
+	color: #9370DB!important;
 }
 
 .cn-deep-purple,
@@ -1559,13 +1564,13 @@ li.nav_item a{
 	padding: 14px 16px;
 	text-decoration: none;
 }
-
+ 
 li.nav_item:hover {
   background-color: #111;
 }
 
 li.nav_item a.active_nav {
-	background-color: #4CAF50;
+	background-color: #9370DB;
 }
 
 
