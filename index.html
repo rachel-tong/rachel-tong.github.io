@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>Rachel Tong</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="main.css">
+
+<body class="cn-light-grey">
+
+    <!--Navigation Bar-->
+    <ul class="nav_bar cn-top">
+		<h1 class = "tool-bar-name cn-display-topright cn-margin-right">Rachel Tong</h1>
+        <li class="nav_item"><a class="active_nav" href="index.html">Home</a></li>
+        <li class="nav_item"><a href="projects.html">Projects</a></li>
+        <li class="nav_item"><a href="resume.html">Resume</a></li>
+        <li class="nav_item"><a href="contactme.html">Contact</a></li>
+    </ul>
+	
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 cn-display-container cn-opacity-min">
+        <div class="cn-display-middle" style="cn-white-space:nowrap;">
+            <span class="cn-centered cn-padding-medium cn-jumbo cn-animate-opacity cn-text-white">About Me</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="cn-content cn-container cn-padding-64" id="about">
+        <p>
+        	My name is Rachel Tong, and I'm an aspiring professional engineer. I am interested in neuroengineering and neuromodulation fields of biomedical engineering. Throughout college,
+        	I worked in Neural Interfaces Research, trying to get an understanding of the neural tissue and how to develop devices that could not only record information from but also stimulate the brain.
+        	I hope to take the skills and knowledge from that experience to fuel additional learning in the field of neuroengineering.
+        	
+			I am also interested in orthopedic biomechanics. My passion for orthopedics stems from my own experiences as I have two metal plates in my forearm from when I broke my arm in gymnastics.
+			That surgery allowed me to heal effectively and completely and allowed me to continue as a gymnast. This is what actually got me interested in biomedical engineering in the first place and I wanted
+			to make devices that could help other people just like someone created this device to help me heal.
+        </p>
+       
+        <div class="cn-row">
+            <div class="cn-centered cn-padding-large">
+                <img src="home/inspiration.jpg" class="cn-round cn-image" width="500" height="333">
+            </div>
+            
+        </div>
+        <p>
+        	I thoroughly enjoy working on difficult problems and pushing the edge of technology. I like working on difficult problems and learning new skills.
+        	With that, I really like working with people - I've found it an effective way to not only gain new skills but also teach others what I have learned.
+        	In the past, I was a Teaching Assistant at the University of Wisconsin, where I mentored young engineers learn the skills to help solve future healthcare problems.
+        </p>
+        
+        <hr>
+        <h3 class="cn-centered cn-padding-16">Things I'm really excited about:</h3>
+        <p class="cn-wide"><i class="fas fa-brain"></i> Neuroengineering</p>
+        <div class="cn-light-grey">
+            <div class="cn-container cn-padding-small cn-red cn-centered cn-round" style="width:100%">&nbsp </div>
+        </div>
+        <p class="cn-wide"><i class="fas fa-running"></i> Orthopedics and Biomechanics</p>
+        <div class="cn-light-grey">
+            <div class="cn-container cn-padding-small cn-blue cn-centered cn-round" style="width:95%">&nbsp </div>
+        </div>
+        <p class="cn-wide"><i class="fas fa-heartbeat"></i> Healthcare and Medical Devices</p>
+        <div class="cn-light-grey">
+            <div class="cn-container cn-padding-small cn-green cn-centered cn-round" style="width:90%">&nbsp </div>
+        </div>
+        <p class="cn-wide"><i class="fas fa-laptop"></i> Product Design and Innovation</p>
+        <div class="cn-light-grey">
+            <div class="cn-container cn-padding-small cn-orange cn-centered cn-round" style="width:85%">&nbsp </div>
+        </div>
+        
+        
+    </div>
+
+    <footer class="cn-container cn-green cn-centered cn-margin-top">
+        <p>Thanks for visiting my website.<br> <a href="contactme.html">Contact me</a> if you have any questions.</p>
+        <br>
+        <br>
+    </footer>
+
+<script>
+	// Used to toggle the menu on small screens when clicking on the menu button
+	function toggleFunction() {
+		var x = document.getElementById("navDemo");
+		if (x.className.indexOf("cn-show") == -1) {
+			x.className += " cn-show";
+		} else {
+			x.className = x.className.replace(" cn-show", "");
+		}
+	}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<title>Projects - Rachel Tong</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href = "projects.css?v=sa">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="projects.js"></script>
+
+<body class="cn-light-grey">
+	<!--Navigation Bar-->
+	<ul class = "nav_bar">
+		<h1 class = "tool-bar-name cn-display-topright cn-margin-right">Rachel Tong</h1>
+		<li class = "nav_item"><a href="index.html">Home</a></li>
+		<li class = "nav_item"><a class="active_nav" href="projects.html">Projects</a></li>
+		<li class = "nav_item"><a href="resume.html">Resume</a></li>
+		<li class = "nav_item"><a href="contactme.html">Contact</a></li>
+	</ul>
+	
+	
+	<!-- Header -->
+		<div class="projects_background cn-container cn-centered cn-blue cn-padding-large">
+			<h2 class="cn-centered cn-jumbo cn-margin cn-padding-large">Projects</h2>
+			<p style="width:80%; margin-left:auto; margin-right:auto">
+				My projects vary from full software projects to combined software/hardware, to full hardware. 
+				I've taken these up as a way to learn more outside of work and school and as a fun hobby. 
+				Many of these are "work in progress" as I continue to tinker and improve them every day. Several are available publicly on GitHub. Click on any project to learn more.
+			</p>
+		</div>
+	
+	<!-- Page Container -->
+    <div class="cn-content cn-margin-bottom" style="max-width:1000px;">
+		
+		<!--Project Descriptors-->
+		<div class = "cn-container cn-white cn-margin-top cn-margin-bottom">
+			
+			<!--Descriptor for Home Hub-->
+			<div class= "project-descriptor" id = "home_hub_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>Home Hub</h3>
+				
+				<p>
+					I created a home hub to control my smart home accessories. 
+					The front-end is running HTML, CSS, and Javascript in a dynamic one-page design to avoid switching pages to get to different views. 
+					It is running on an iPad mounted to the wall for ease of access. The web interface allows access to the Hub from any device with a web browser connected to the local network.
+					The backend is running Flask on a Python script. The Python script is running on a Raspberry Pi 3 Model B. The script utilizes listens to HTTP requests and handles them accordingly. 
+					<br>
+					<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+						<img class = "project_images i_home_hub" src = "projects/home_hub/main.PNG" style = "width:80%">
+						<img class = "project_images i_home_hub" src = "projects/home_hub/Web.png" style = "width:80%">
+						
+						<div class = "project_images i_home_hub" style = "width:80%">
+							<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+								<div class='embed-container'>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/lVzjsLNHT7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+						<button id = "i_home_hub" class="cn-button cn-black cn-display-left" onclick="plusImage(-1, this.id)" style = "border-radius: 20px">&#10094;</button>
+						<button id = "i_home_hub" class="cn-button cn-black cn-display-right" onclick="plusImage(+1, this.id)" style = "border-radius: 20px">&#10095;</button>
+					</div>
+					<br>
+					My apartment uses Philips Hue LED light bulbs and the Python script uses HTTP requests to the Philips Hue Bridge to control lights and sensors.
+					A circuit was created with the Pi to include an IR LED to be placed in front of the television. The LED is programmed to mimic the OEM remote sequences to control the TV.
+				</p>
+			</div>
+			
+			<!--Descriptor for Canvas Editor-->
+			<div class= "project-descriptor" id = "canvas_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>Canvas Assignment Editor</h3>
+				<p>
+					Working as a TA at the University of Wisconsin - Madison, I realized that assigning different due dates for different lab sections was a painful and manual process.
+					Especially when transitioning between semesters, we could import and offset due dates when the due dates are constant for every section. However, we could not do this if the section
+					due dates were different. Assigning a single lab due date to could take upwards of a minute for each section - when you have 4 sections and 16 labs, that is over an hour of tedious
+					work, mostly just waiting for the page to refresh.
+				</p>
+				<p>
+					Luckily, Canvas provides an API for managing Canvas courses. Leveraging this API, I created a Python app that would download a Canvas course's assignments to a TSV file (easily opened in Excel or Google Sheets). 
+					Here, the instructors could update the due dates, even using equations if lab section due dates are evenly spaced out, in a matter of minutes and simply upload it back to Canvas. 
+				</p>
+				<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+					<img class = "project_images i_canvas" src = "projects/canvas_editor/GUI.png" style = "width:80%">
+					<img class = "project_images i_canvas" src = "projects/canvas_editor/Spreadsheet.png" style = "width:80%">
+					<button id = "i_canvas" class="cn-button cn-black cn-display-left" onclick="plusImage(-1, this.id)" style = "border-radius: 20px">&#10094;</button>
+					<button id = "i_canvas" class="cn-button cn-black cn-display-right" onclick="plusImage(+1, this.id)" style = "border-radius: 20px">&#10095;</button>				
+				</div>
+				
+				<p>
+					This project was riddled with difficulty as sections and assignments were all labeled by ID number and these had to be related back to section/assignment name so that the end-user could easily identify
+					what they he/she was working with. After download, the JSON-formatted data is reorganized into TSV format for the end-user and then converted back to JSON before uploading and updating the Canvas site.
+					If you are an end-user of this project, and you have requests, feel free to <a href="contactme.html">contact me</a> if you have any questions.
+				</p>
+				<a href="https://github.com/cnguyen0320/CanvasAssignmentsEditor" target="_blank">See the code and learn more at GitHub.</a>
+			</div>
+			
+			<!--Descriptor for Digit Classifier-->
+			<div class= "project-descriptor" id = "digit_classifier_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>Digit Classifier</h3>
+				<p>
+					My team and I created a 2-layer neural network to predict hand drawn digits. The neural network was created by hand (without the use of external NN libraries).
+					Using Semeion Handwritten Digit Data Set, we use forward and back propagation to update weights on Nodes and output using a soft-max function to identify hand-written digits.
+					After developing the learning model using the precompiled data set, we implemented a GUI that allows the user to draw onto a Canvas and the model immediately predicts the digit.
+					
+				</p>
+				<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+					<img class = "project_images i_digit_classifier" src = "projects/digit_classifier/drawing.png" style = "width:80%">
+					<img class = "project_images i_digit_classifier" src = "projects/digit_classifier/prompt.png" style = "width:80%">
+					<button id = "i_digit_classifier" class="cn-button cn-black cn-display-right" onclick="plusImage(+1, this.id)" style = "border-radius: 20px">&#10095;</button>				
+					<button id = "i_digit_classifier" class="cn-button cn-black cn-display-left" onclick="plusImage(-1, this.id)" style = "border-radius: 20px">&#10094;</button>
+				</div>
+				<p>
+					Using a 2-layer neural network with rather simple learning methods allowed us to achieve roughly 90% accuracy on a testing set of data. We hope to leverage what we learned and create
+					a more complex model that would allow us to achieve much greater accuracy.
+				</p>
+				<a href="https://github.com/cnguyen0320/DigitClassifier" target="_blank">See the code and learn more at GitHub.</a>
+			</div>
+			
+			<!--Descriptor for Retirement Calculator-->
+			<div class= "project-descriptor" id = "retirement_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>Retirement Calculator</h3>
+				<p>
+					I created a retirement calculator to show Year-over-Year earnings and expenses based on input parameters. It can extrapolate retirement assets and the point of asset depletion.
+					Each year can be explored in the detailed tab while summary information is provided by a graph and as text. Users can manipulate input parameters to compare different scenarios.
+				</p>
+				<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+					<img class = "project_images i_retirement" src = "projects/retirement_calculator/GUI.png" style = "width:80%; padding:50px 0px">
+					<img class = "project_images i_retirement" src = "projects/retirement_calculator/graph.png" style = "width:80%">
+					<img class = "project_images i_retirement" src = "projects/retirement_calculator/chart.png" style = "width:80%">
+					<img class = "project_images i_retirement" src = "projects/retirement_calculator/summary.png" style = "width:80%">
+					<button id = "i_retirement" class="cn-button cn-black cn-display-right" onclick="plusImage(+1, this.id)" style = "border-radius: 20px">&#10095;</button>				
+					<button id = "i_retirement" class="cn-button cn-black cn-display-left" onclick="plusImage(-1, this.id)" style = "border-radius: 20px">&#10094;</button>
+				</div>
+				<p>
+					Additionally, users can save default values such that when additional runs are completed, values do not need to all be entered again. If you are interested in using this for yourself or
+					modifying it, see the <a href = "https://github.com/cnguyen0320/retirementCalculator" target="_blank">GitHub repository</a>. If you have questions about it, feel free to <a href="contactme.html">contact me</a>.
+				</p>
+				
+				<a href = "https://github.com/cnguyen0320/retirementCalculator" target="_blank">See the code and learn more at GitHub.</a>
+			</div>
+			
+			<!--Descriptor for CV Robot-->
+			<div class= "project-descriptor" id = "CV_Robot_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>Object Recognition Robotic Arm</h3>
+				<p>
+					For a robotics project, my team created a 6 axis robot with an attached overhead camera. The camera is attached to a computer running YOLOv3 on the Python openCV library and is used to find target objects.
+					The Python script sends coordinates of the objects to the robot in the robot-coordinate frame. 
+				</p>
+				<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+					<div class='embed-container'>
+						<iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/3Xz3Fnt4kvw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+				<p>
+					The robot is running its own Python script on a Raspberry Pi. Inverse kinematics were used to move the robot end of arm to the target location and pick the images. 
+					The images were all prepared with magnets and the robot end of arm was switching an electromagnet on to grab a part. The robot would take the objects to the drop off and continue to pick up target objects until none remain.
+				</p>
+				
+			</div>
+			
+			<!--Descriptor for IoT with Google Sheets-->
+			<div class= "project-descriptor" id = "IoT_GS_pd">
+				<button class="cn-button cn-white cn-hover-light-grey cn-large" onclick="closeallpd()" style="float: right; border-radius: 20px;">x</button>
+				<h3 class = cn-centered>IoT with Google Sheets</h3>
+				<p>
+					This project was designed for the Biomedical Engineering Department at the University of Wisconsin - Madison. For the Introduction to Engineering Design course, students had to create a bioreactor complete with temperature control and monitoring.
+					The course wanted to move away from local SD card data logging and transition to internet-based data logging for many reasons including reliability, versatility, and ease of use.
+				</p>
+				<div class = "cn-display-container cn-content cn-centered" style="width:80%">
+					<img class = "project_images i_iotgs" src = "projects/IoT_with_GS/box.jpg" style = "width:80%">
+					<img class = "project_images i_iotgs" src = "projects/IoT_with_GS/interface.png" style = "width:80%">
+					<img class = "project_images i_iotgs" src = "projects/IoT_with_GS/alert.png" style = "width:80%">
+					<button id = "i_iotgs" class="cn-button cn-black cn-display-right" onclick="plusImage(+1, this.id)" style = "border-radius: 20px">&#10095;</button>				
+					<button id = "i_iotgs" class="cn-button cn-black cn-display-left" onclick="plusImage(-1, this.id)" style = "border-radius: 20px">&#10094;</button>
+				</div>
+				<p>
+					I designed a new data logging system from the ground up leveraging the NodeMCU ESP8266 microcontroller. I also learned how to use the Google Apps Script and wrote a script to wait for received data, log the time of the data, and populate a spreadsheet. 
+					There were many "bells and whistles" added to the script once the basic needs were met. These include email notification on out-of-spec data, graphing, and the ability to routinely export and clear the data to maintain speed in the spreadsheet. 
+					I worked with our IT team to ensure connectivity for our WiFi microcontrollers on the University network and with the instructors to implement the system for the course starting in 2019.
+				</p>
+				<p>
+					There is a lot more to this project than I can fit on this page. <a href="contactme.html">Contact me</a> to learn more about my steps on creating this system and see the 
+					<a href = "https://github.com/cnguyen0320/ESP8266-Google-Sheets-Data-Logging" target="_blank">GitHub</a>
+					page for steps on implementing it yourself.
+				</p>
+			</div>
+		</div>
+		
+		
+		<!-- First Photo Grid-->
+	   <div class="col-container cn-margin-top">
+		<div class="col cn-white cn-padding-small" id = "home_hub_box">
+			<h5 class = "cn-center"><b>Home Hub</b></h5>
+			<img src="projects/home_hub/main.PNG" class="cn-hover-opacity project_cover_image">
+		</div>
+	
+		<div class="col cn-white cn-padding-small" id = "IoT_GS_box">
+			<h5 class = "cn-center"><b>IoT with Google Sheets</b></h5>
+			<img src="projects/IoT_with_GS/google-sheets-logo.jpg" class="cn-hover-opacity project_cover_image">
+		</div>
+		<div class="col cn-white cn-padding-small" id = "canvas_box">
+			<h5 class = "cn-center"><b>Assignment Editor</b></h5>
+			<img src="projects/canvas_editor/logo.jpg" class="cn-hover-opacity project_cover_image">
+		</div>
+	</div>
+
+  
+	  <!-- Second Photo Grid-->
+	  <div class="col-container">
+	  
+		<div class="col cn-white cn-padding-small" id = "retirement_box">
+			<h5 class = "cn-center"><b>Retirement Calculator</b></h5>
+			<img src="projects/retirement_calculator/asset_chart.png" class="cn-hover-opacity project_cover_image">
+		</div>
+		
+		<div class="col cn-white cn-padding-small" id = "CV_Robot_box">
+			<h5 class = "cn-center"><b>Object Recognition Robot</b></h5>
+			<img src="projects/robot_vision/robot_vision.png" class="cn-hover-opacity project_cover_image">
+		</div>
+		
+		<div class="col cn-white cn-padding-small" id = "digit_classifier_box">
+			<h5 class = "cn-center"><b>Digit Classifier</b></h5>
+			<img src="projects/digit_classifier/nn.png" class="cn-hover-opacity project_cover_image">
+		  </div>
+		
+	  </div>
+	</div>
+	
+
+	
+    <footer class="cn-container cn-blue cn-centered cn-margin-top">
+        <br>
+        <p>Thanks for visiting my website.<br> <a href="contactme.html">Contact me</a> if you have any questions.</p>
+        <br>
+
+    </footer>
+
+</body>
+
+</html>

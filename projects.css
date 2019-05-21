@@ -1,0 +1,71 @@
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+li.nav_item-right{
+	float:right
+}
+
+li.nav_item-right a{
+	
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li.nav_item-right:hover {
+  background-color: #111;
+}
+
+li.nav_item-right a.active_nav {
+	background-color: #2196F3;
+}
+
+.projects_background {
+  background-image: url('projects/projects.jpg');
+  width: 100%
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 1px 2px 10px #000000;
+  
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+  border-collapse:separate;
+  border-spacing:20px 10px;
+  table-layout: fixed;
+}
+.col {
+  display: table-cell;
+  padding: 0.01em 16px
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .col { 
+    display: table-cell;
+    width: 100%;
+    margin-right: 10px
+    margin-left: 10px
+    margin-top: 10px
+    margin-bottom: 10px
+  }
+}
+
+.project-descriptor{
+	display: none;
+}
+
+.project_cover_image{
+	width: 100%;
+	cursor: pointer;
+}
